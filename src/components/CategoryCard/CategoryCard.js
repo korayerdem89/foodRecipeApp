@@ -3,10 +3,12 @@ import {View, Text, Image, TouchableWithoutFeedback} from 'react-native';
 import styles from './CategoryCard.style';
 
 const CategoryCard = ({product}) => {
-  console.log({product});
   return (
     <TouchableWithoutFeedback>
-      <Text>Hello </Text>
+      <View>
+        <Image source={{uri: product.strCategoryThumb}} style={styles.image} />
+        <Text>{product.strCategory} </Text>
+      </View>
     </TouchableWithoutFeedback>
   );
 };
