@@ -5,9 +5,14 @@ import styles from './CategoryCard.style';
 const CategoryCard = ({product}) => {
   return (
     <TouchableWithoutFeedback>
-      <View>
-        <Image source={{uri: product.strCategoryThumb}} style={styles.image} />
-        <Text>{product.strCategory} </Text>
+      <View style={styles.container}>
+        <View style={styles.imageView}>
+          <Image
+            source={{uri: product.strCategoryThumb}}
+            style={styles.image}
+          />
+        </View>
+        <Text style={styles.text}>{product.strCategory} </Text>
       </View>
     </TouchableWithoutFeedback>
   );

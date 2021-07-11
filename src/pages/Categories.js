@@ -17,7 +17,7 @@ const Categories = () => {
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor:'#fea501'}}>
       <FlatList
         keyExtractor={item => item.idCategory}
         data={data.categories}
