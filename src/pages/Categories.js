@@ -15,13 +15,15 @@ const Categories = () => {
   if (error) {
     return <Error />;
   }
-
+  const renderCategory = ({item}) => (
+    <CategoryCard product={item} />
+  ); 
   return (
     <SafeAreaView style={{backgroundColor:'#fea501'}}>
       <FlatList
         keyExtractor={item => item.idCategory}
         data={data.categories}
-        renderItem={({item}) => <CategoryCard product={item} />}
+        renderItem={renderCategory}
       />
     </SafeAreaView>
   );
